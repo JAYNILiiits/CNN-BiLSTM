@@ -105,7 +105,7 @@ After running, open your web browser and navigate to `http://127.0.0.1:5000/`.
 - **Start Training**: Click the "Start Training" button. The GUI will show real-time progress.
 - Results (metrics, plots, model checkpoint) will be saved in the `./training_results` directory.
 
-## 的环境变量 Configuration / Environment Variables
+## Configuration / Environment Variables
 
 The scripts dynamically detect the available device (`cuda` or `cpu`). No explicit environment variables are typically needed.
 
