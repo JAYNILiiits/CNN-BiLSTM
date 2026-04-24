@@ -15,36 +15,6 @@ This repository contains implementations of Convolutional Neural Network (CNN) a
 ## 🏗️ Architecture
 
 The core of this project revolves around a CNN-BiLSTM neural network. Data can be synthetically generated or provided via CSV, then fed into the model for training and classification.
-
-```mermaid
-graph TD
-    A[Data Source] --> B(Data Generator)
-    B --> C{Dataset Creation};
-    C --> D[Data Preprocessing];
-    D --> E[Batching & DataLoader];
-
-    subgraph Training Processes
-        E --> F(CNNBiLSTM Model)
-        F -- Train --> G[Optimizer & Loss Function]
-        G -- Backpropagate --> F
-        F -- Validate --> H[Metrics & Plotting]
-        H -- Save Plots --> I(results_*/ directory)
-        F -- Save Best Model --> J(best.pt file)
-    end
-
-    subgraph GUI-based Training
-    K[User Upload CSV] --> L(Flask Backend)
-    L --> M{Data Preprocessing <br/> (RobustScaler, Augmentation)}
-    M --> N(UltraOptimizedPacketClassifier Model)
-    N -- Train --> O[Focal Loss & AdamW]
-    O -- Backpropagate --> N
-    N -- Validate & Evaluate --> P[Confusion Matrix, Report]
-    P -- Update UI --> L
-    L -- Render --> Q[Web Browser]
-    end
-
-    C -- Data for GUI --> M;
-    D -- Data for CLI --> E;
 ```
 
 ## 💻 Tech Stack
